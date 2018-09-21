@@ -14,6 +14,9 @@
 		309F90B7214C6CC600005133 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 309F90B6214C6CC600005133 /* Assets.xcassets */; };
 		309F90BA214C6CC600005133 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309F90B8214C6CC600005133 /* LaunchScreen.storyboard */; };
 		309F90C5214C6CC600005133 /* plasticfishes_mvcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F90C4214C6CC600005133 /* plasticfishes_mvcTests.swift */; };
+		309F90D4214C822800005133 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F90D3214C822800005133 /* DataSource.swift */; };
+		309F90D6214C840100005133 /* Fish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F90D5214C840100005133 /* Fish.swift */; };
+		309F90D9214C880D00005133 /* FishService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F90D8214C880D00005133 /* FishService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		309F90C0214C6CC600005133 /* plasticfishes-mvcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "plasticfishes-mvcTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		309F90C4214C6CC600005133 /* plasticfishes_mvcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = plasticfishes_mvcTests.swift; sourceTree = "<group>"; };
 		309F90C6214C6CC600005133 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		309F90D3214C822800005133 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		309F90D5214C840100005133 /* Fish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fish.swift; sourceTree = "<group>"; };
+		309F90D8214C880D00005133 /* FishService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,8 @@
 		309F90AC214C6CC500005133 /* plasticfishes-mvc */ = {
 			isa = PBXGroup;
 			children = (
+				309F90D7214C879000005133 /* services */,
+				309F90D2214C7ED400005133 /* network */,
 				309F90CF214C70EB00005133 /* models */,
 				309F90D0214C70F500005133 /* controllers */,
 				309F90D1214C711400005133 /* views */,
@@ -103,6 +111,7 @@
 		309F90CF214C70EB00005133 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				309F90D5214C840100005133 /* Fish.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -121,6 +130,22 @@
 			children = (
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		309F90D2214C7ED400005133 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				309F90D3214C822800005133 /* DataSource.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		309F90D7214C879000005133 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				309F90D8214C880D00005133 /* FishService.swift */,
+			);
+			path = services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,9 +249,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				309F90D6214C840100005133 /* Fish.swift in Sources */,
 				309F90B2214C6CC500005133 /* DetailViewController.swift in Sources */,
 				309F90B0214C6CC500005133 /* MasterViewController.swift in Sources */,
+				309F90D4214C822800005133 /* DataSource.swift in Sources */,
 				309F90AE214C6CC500005133 /* AppDelegate.swift in Sources */,
+				309F90D9214C880D00005133 /* FishService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
