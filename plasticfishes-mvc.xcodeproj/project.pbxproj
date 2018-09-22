@@ -11,6 +11,8 @@
 		309288032155AE9700F85346 /* FishesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 309288012155AE9700F85346 /* FishesTableViewController.xib */; };
 		309288062155B0B600F85346 /* FishesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309288042155B0B600F85346 /* FishesTableViewCell.swift */; };
 		309288072155B0B600F85346 /* FishesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 309288052155B0B600F85346 /* FishesTableViewCell.xib */; };
+		309288092155C2C400F85346 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309288082155C2C400F85346 /* Detail.storyboard */; };
+		3092880B2155C6B900F85346 /* FishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3092880A2155C6B900F85346 /* FishViewController.swift */; };
 		309F90AE214C6CC500005133 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F90AD214C6CC500005133 /* AppDelegate.swift */; };
 		309F90B7214C6CC600005133 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 309F90B6214C6CC600005133 /* Assets.xcassets */; };
 		309F90BA214C6CC600005133 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309F90B8214C6CC600005133 /* LaunchScreen.storyboard */; };
@@ -35,6 +37,8 @@
 		309288012155AE9700F85346 /* FishesTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FishesTableViewController.xib; sourceTree = "<group>"; };
 		309288042155B0B600F85346 /* FishesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishesTableViewCell.swift; sourceTree = "<group>"; };
 		309288052155B0B600F85346 /* FishesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FishesTableViewCell.xib; sourceTree = "<group>"; };
+		309288082155C2C400F85346 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		3092880A2155C6B900F85346 /* FishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishViewController.swift; sourceTree = "<group>"; };
 		309F90AA214C6CC500005133 /* plasticfishes-mvc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "plasticfishes-mvc.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		309F90AD214C6CC500005133 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		309F90B6214C6CC600005133 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 				309F90D0214C70F500005133 /* controllers */,
 				309F90D1214C711400005133 /* views */,
 				309F90AD214C6CC500005133 /* AppDelegate.swift */,
+				309288082155C2C400F85346 /* Detail.storyboard */,
 				309F90B6214C6CC600005133 /* Assets.xcassets */,
 				309F90B8214C6CC600005133 /* LaunchScreen.storyboard */,
 				309F90BB214C6CC600005133 /* Info.plist */,
@@ -124,6 +129,7 @@
 				309288012155AE9700F85346 /* FishesTableViewController.xib */,
 				309288042155B0B600F85346 /* FishesTableViewCell.swift */,
 				309288052155B0B600F85346 /* FishesTableViewCell.xib */,
+				3092880A2155C6B900F85346 /* FishViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -233,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				309F90BA214C6CC600005133 /* LaunchScreen.storyboard in Resources */,
+				309288092155C2C400F85346 /* Detail.storyboard in Resources */,
 				309288072155B0B600F85346 /* FishesTableViewCell.xib in Resources */,
 				309288032155AE9700F85346 /* FishesTableViewController.xib in Resources */,
 				309F90B7214C6CC600005133 /* Assets.xcassets in Resources */,
@@ -257,6 +264,7 @@
 				309288022155AE9700F85346 /* FishesTableViewController.swift in Sources */,
 				309F90D4214C822800005133 /* DataSource.swift in Sources */,
 				309F90AE214C6CC500005133 /* AppDelegate.swift in Sources */,
+				3092880B2155C6B900F85346 /* FishViewController.swift in Sources */,
 				309F90D9214C880D00005133 /* FishService.swift in Sources */,
 				309288062155B0B600F85346 /* FishesTableViewCell.swift in Sources */,
 			);

@@ -47,6 +47,15 @@ class FishesTableViewController: UITableViewController {
         cell.descriptioFish.text = fish.webUrlString
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let storyboard = UIStoryboard.init(name: "Detail", bundle: Bundle.main)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "fishDetail")
+        
+        navigationController?.pushViewController(viewController, animated: true)
+        
+    }
 
     /*
     // MARK: - Navigation
