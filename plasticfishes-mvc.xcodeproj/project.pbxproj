@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		300B8B512156902800B9AA9F /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300B8B502156902800B9AA9F /* Client.swift */; };
 		309288022155AE9700F85346 /* FishesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309288002155AE9700F85346 /* FishesTableViewController.swift */; };
 		309288032155AE9700F85346 /* FishesTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 309288012155AE9700F85346 /* FishesTableViewController.xib */; };
 		309288062155B0B600F85346 /* FishesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309288042155B0B600F85346 /* FishesTableViewCell.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		300B8B502156902800B9AA9F /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		309288002155AE9700F85346 /* FishesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishesTableViewController.swift; sourceTree = "<group>"; };
 		309288012155AE9700F85346 /* FishesTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FishesTableViewController.xib; sourceTree = "<group>"; };
 		309288042155B0B600F85346 /* FishesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishesTableViewCell.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				309F90D8214C880D00005133 /* FishService.swift */,
+				300B8B502156902800B9AA9F /* Client.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				309F90AE214C6CC500005133 /* AppDelegate.swift in Sources */,
 				3092880B2155C6B900F85346 /* FishViewController.swift in Sources */,
 				309F90D9214C880D00005133 /* FishService.swift in Sources */,
+				300B8B512156902800B9AA9F /* Client.swift in Sources */,
 				309288062155B0B600F85346 /* FishesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

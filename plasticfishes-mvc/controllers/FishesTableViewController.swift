@@ -9,14 +9,18 @@
 import UIKit
 
 class FishesTableViewController: UITableViewController {
-    var fishes = [Fish]()
+    var fishes: [Fish]? {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     let cellId = "fishCell"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Fishes"
-        fishes = FishService.list_all()
         tableView.register(UINib(nibName: "FishesTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
+        loadFishes()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -31,20 +35,33 @@ class FishesTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
+    func loadFishes(){
+        FishService.shared.all { fishes in self.fishes = fishes }
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fishes.count
+        return fishes?.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! FishesTableViewCell
         
-        let fish = fishes[indexPath.row]
-        cell.titleFish.text = fish.name
-        cell.descriptioFish.text = fish.webUrlString
+        let fish = fishes?[indexPath.row]
+        cell.titleFish.text = fish?.name
+        cell.descriptioFish.text = fish?.webUrlString
+        
+        DispatchQueue.global(qos: .background).async {
+            if let imgData = fish?.imageData {
+                DispatchQueue.main.async {
+                    cell.imageFish.image = UIImage(data: imgData)
+                }
+            }
+        }
+        
         return cell
     }
     
