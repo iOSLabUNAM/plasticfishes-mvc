@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class FishesTableViewController: UITableViewController {
     var fishes: [Fish]? {
@@ -50,18 +51,10 @@ class FishesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! FishesTableViewCell
         
-        let fish = fishes?[indexPath.row]
-        cell.titleFish.text = fish?.name
-        cell.descriptioFish.text = fish?.webUrlString
-        
-        DispatchQueue.global(qos: .background).async {
-            if let imgData = fish?.imageData {
-                DispatchQueue.main.async {
-                    cell.imageFish.image = UIImage(data: imgData)
-                }
-            }
-        }
-        
+        guard let fish = fishes?[indexPath.row] else { return cell }
+        cell.titleFish.text = fish.name
+        cell.descriptioFish.text = fish.webUrlString
+        cell.imageFish.kf.setImage(with: fish.imageURL!)        
         return cell
     }
     
