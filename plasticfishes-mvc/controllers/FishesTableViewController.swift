@@ -30,21 +30,21 @@ class FishesTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
 
     }
-    
+
     // MARK: - Table view height
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(74)
     }
 
     // MARK: - Table view data source
-    func loadFishes(){
+    func loadFishes() {
         FishService.shared.all { [weak self] fishes in
             DispatchQueue.main.async {
               self?.fishes = fishes
             }
         }
     }
-    
+
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -55,21 +55,21 @@ class FishesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! FishesTableViewCell
-        
+
         guard let fish = fishes?[indexPath.row] else { return cell }
         cell.titleFish.text = fish.name
         cell.descriptioFish.text = fish.webUrlString
-        cell.imageFish.kf.setImage(with: fish.imageURL!)        
+        cell.imageFish.kf.setImage(with: fish.imageURL!)
         return cell
     }
-    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let storyboard = UIStoryboard.init(name: "Detail", bundle: Bundle.main)
         let viewController = storyboard.instantiateViewController(withIdentifier: "fishDetail")
-        
+
         navigationController?.pushViewController(viewController, animated: true)
-        
+
     }
 
     /*
@@ -81,5 +81,5 @@ class FishesTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
+
 }

@@ -12,35 +12,35 @@ typealias dataHandler = (Data?) -> Void
 
 struct Client {
     let baseURLComponents: URLComponents
-     
-    func get(path: String, successHandler: dataHandler?){
+
+    func get(path: String, successHandler: dataHandler?) {
         get(path: path, body: nil, successHandler: successHandler)
     }
-    
-    func get(path: String, body: Data?, successHandler: dataHandler?){
+
+    func get(path: String, body: Data?, successHandler: dataHandler?) {
         request("GET", path: path, body: body, successHandler: successHandler)
     }
 
-    func post(path: String, body: Data?, successHandler: dataHandler?){
+    func post(path: String, body: Data?, successHandler: dataHandler?) {
         request("POST", path: path, body: body, successHandler: successHandler)
     }
 
-    func put(path: String, body: Data?, successHandler: dataHandler?){
+    func put(path: String, body: Data?, successHandler: dataHandler?) {
         request("PUT", path: path, body: body, successHandler: successHandler)
     }
-    
-    func patch(path: String, body: Data?, successHandler: dataHandler?){
+
+    func patch(path: String, body: Data?, successHandler: dataHandler?) {
         request("PATCH", path: path, body: body, successHandler: successHandler)
     }
-    
-    func delete(path: String, successHandler: dataHandler?){
+
+    func delete(path: String, successHandler: dataHandler?) {
         delete(path: path, body: nil, successHandler: successHandler)
     }
-    
-    func delete(path: String, body: Data?, successHandler: dataHandler?){
+
+    func delete(path: String, body: Data?, successHandler: dataHandler?) {
         request("DELETE", path: path, body: body, successHandler: successHandler)
     }
-    
+
     func request(_ method: String, path: String, body: Data?, successHandler: dataHandler?) {
         var requestURLComponents = baseURLComponents
         requestURLComponents.path = path

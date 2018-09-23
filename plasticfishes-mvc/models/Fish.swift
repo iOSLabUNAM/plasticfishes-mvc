@@ -15,7 +15,7 @@ struct Fish: Decodable {
     let apiUrlString: String
     let webUrlString: String
     let imageUrlString: String
-    
+
     private enum CodingKeys: String, CodingKey {
         case id
         case name
@@ -24,19 +24,19 @@ struct Fish: Decodable {
         case webUrlString = "web_url"
         case imageUrlString = "image_url"
     }
-    
+
     var apiURL: URL? {
         return URL(string: apiUrlString)
     }
-    
+
     var webURL: URL? {
         return URL(string: webUrlString)
     }
-    
+
     var imageURL: URL? {
         return URL(string: imageUrlString)
     }
-    
+
     var imageData: Data? {
         guard let url = imageURL else { return nil }
         do {
