@@ -28,6 +28,7 @@ class FishesTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+
     }
     
     // MARK: - Table view height
@@ -37,7 +38,11 @@ class FishesTableViewController: UITableViewController {
 
     // MARK: - Table view data source
     func loadFishes(){
-        FishService.shared.all { fishes in self.fishes = fishes }
+        FishService.shared.all { [weak self] fishes in
+            DispatchQueue.main.async {
+              self?.fishes = fishes
+            }
+        }
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

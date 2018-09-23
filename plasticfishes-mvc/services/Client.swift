@@ -53,7 +53,7 @@ struct Client {
             if error != nil { return }
             let httpResponse = response as! HTTPURLResponse
             if httpResponse.statusCode == 200, let handler = successHandler {
-                DispatchQueue.main.async { handler(data) }
+                handler(data)
             }
         }
         task.resume()
