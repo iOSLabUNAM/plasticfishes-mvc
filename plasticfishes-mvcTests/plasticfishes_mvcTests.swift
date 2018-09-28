@@ -12,7 +12,7 @@ import XCTest
 class plasticfishes_mvcTests: XCTestCase {
 
     func testFishes() {
-        let result = FishService.list_all()
+        let result = FishService.shared.all()
         XCTAssertEqual(14, result.count)
 
         let fish = result.first!
