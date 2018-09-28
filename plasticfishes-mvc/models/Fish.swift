@@ -9,12 +9,21 @@
 import Foundation
 
 struct Fish: Decodable {
-    let id: String
+    let id: String?
     let name: String
     let text: String
-    let apiUrlString: String
-    let webUrlString: String
-    let imageUrlString: String
+    let apiUrlString: String?
+    let webUrlString: String?
+    let imageUrlString: String?
+
+    init(name: String, text: String) {
+        self.id = nil
+        self.name = name
+        self.text = text
+        self.apiUrlString = nil
+        self.webUrlString = nil
+        self.imageUrlString = nil
+    }
 
     private enum CodingKeys: String, CodingKey {
         case id
@@ -26,15 +35,18 @@ struct Fish: Decodable {
     }
 
     var apiURL: URL? {
-        return URL(string: apiUrlString)
+        guard let url = apiUrlString else { return nil }
+        return URL(string: url)
     }
 
     var webURL: URL? {
-        return URL(string: webUrlString)
+        guard let url = webUrlString else { return nil }
+        return URL(string: url)
     }
 
     var imageURL: URL? {
-        return URL(string: imageUrlString)
+        guard let url = imageUrlString else { return nil }
+        return URL(string: url)
     }
 
     var imageData: Data? {
