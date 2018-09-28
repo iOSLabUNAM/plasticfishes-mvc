@@ -22,6 +22,8 @@
 		309F90D4214C822800005133 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F90D3214C822800005133 /* DataSource.swift */; };
 		309F90D6214C840100005133 /* Fish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F90D5214C840100005133 /* Fish.swift */; };
 		309F90D9214C880D00005133 /* FishService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309F90D8214C880D00005133 /* FishService.swift */; };
+		30F929BC215DAD9F001424F8 /* FishFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F929BB215DAD9F001424F8 /* FishFormView.swift */; };
+		30F929BE215DB58C001424F8 /* CreateFishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30F929BD215DB58C001424F8 /* CreateFishViewController.swift */; };
 		822B1E8BC0A7AD5E3AF39371 /* Pods_plasticfishes_mvc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DF2D8E7FA85F80835CB4CF1 /* Pods_plasticfishes_mvc.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		309F90D3214C822800005133 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		309F90D5214C840100005133 /* Fish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fish.swift; sourceTree = "<group>"; };
 		309F90D8214C880D00005133 /* FishService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishService.swift; sourceTree = "<group>"; };
+		30F929BB215DAD9F001424F8 /* FishFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FishFormView.swift; sourceTree = "<group>"; };
+		30F929BD215DB58C001424F8 /* CreateFishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFishViewController.swift; sourceTree = "<group>"; };
 		44493DD824559F29BB0C607B /* Pods-plasticfishes-mvc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plasticfishes-mvc.release.xcconfig"; path = "Pods/Target Support Files/Pods-plasticfishes-mvc/Pods-plasticfishes-mvc.release.xcconfig"; sourceTree = "<group>"; };
 		4DF2D8E7FA85F80835CB4CF1 /* Pods_plasticfishes_mvc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_plasticfishes_mvc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFCCD0848564E534BA0212BA /* Pods-plasticfishes-mvcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plasticfishes-mvcTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-plasticfishes-mvcTests/Pods-plasticfishes-mvcTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 				309288042155B0B600F85346 /* FishesTableViewCell.swift */,
 				309288052155B0B600F85346 /* FishesTableViewCell.xib */,
 				3092880A2155C6B900F85346 /* FishViewController.swift */,
+				30F929BD215DB58C001424F8 /* CreateFishViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -171,6 +176,7 @@
 		309F90D1214C711400005133 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				30F929BB215DAD9F001424F8 /* FishFormView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -359,9 +365,11 @@
 				309288022155AE9700F85346 /* FishesTableViewController.swift in Sources */,
 				309F90D4214C822800005133 /* DataSource.swift in Sources */,
 				309F90AE214C6CC500005133 /* AppDelegate.swift in Sources */,
+				30F929BC215DAD9F001424F8 /* FishFormView.swift in Sources */,
 				3092880B2155C6B900F85346 /* FishViewController.swift in Sources */,
 				309F90D9214C880D00005133 /* FishService.swift in Sources */,
 				300B8B512156902800B9AA9F /* Client.swift in Sources */,
+				30F929BE215DB58C001424F8 /* CreateFishViewController.swift in Sources */,
 				309288062155B0B600F85346 /* FishesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

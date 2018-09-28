@@ -47,7 +47,7 @@ struct Client {
         var request = URLRequest(url: requestURLComponents.url!)
         request.httpMethod = method
         request.httpBody = body
-        debugPrint(request)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if error != nil { return }

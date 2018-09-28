@@ -20,6 +20,8 @@ class FishesTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Fishes"
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addFish(_:)))
+        navigationItem.rightBarButtonItem = addButton
         tableView.register(UINib(nibName: "FishesTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
         loadFishes()
 
@@ -72,9 +74,12 @@ class FishesTableViewController: UITableViewController {
 
     }
 
-    /*
     // MARK: - Navigation
 
+    @objc func addFish(_ sender: Any) {
+        present(CreateFishViewController(), animated: true, completion: nil)
+    }
+    /*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.

@@ -27,6 +27,5 @@ struct FishService {
             let result = try? self.jsonDecoder.decode([Fish].self, from: jsonData)
             completion(result ?? [Fish]())
         }
-
     }
 }
