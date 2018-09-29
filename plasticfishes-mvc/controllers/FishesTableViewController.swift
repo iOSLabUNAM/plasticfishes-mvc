@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Kingfisher
+//import Kingfisher
 
 class FishesTableViewController: UITableViewController {
     var fishes: [Fish]? {
@@ -61,7 +61,7 @@ class FishesTableViewController: UITableViewController {
         guard let fish = fishes?[indexPath.row] else { return cell }
         cell.titleFish.text = fish.name
         cell.descriptioFish.text = fish.webUrlString
-        cell.imageFish.kf.setImage(with: fish.imageURL!)
+        //cell.imageFish.kf.setImage(with: fish.imageURL!)
         return cell
     }
 

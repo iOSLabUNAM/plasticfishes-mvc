@@ -14,11 +14,12 @@ class CreateFishViewController: UIViewController {
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
+    
 
-    let saveButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.save,
+    let saveButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.save,
                                                target: nil, action: #selector(create(_:)))
 
-    let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.cancel,
+    let cancelButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.cancel,
                                        target: nil, action: #selector(cancel(_:)))
 
     lazy var navBar: UINavigationBar = {

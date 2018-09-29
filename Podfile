@@ -6,7 +6,7 @@ target 'plasticfishes-mvc' do
   use_frameworks!
 
   # Pods for plasticfishes-mvc
-  pod 'Kingfisher', '~> 4.0'
+#  pod 'Kingfisher', '~> 4.0'
 
   target 'plasticfishes-mvcTests' do
     inherit! :search_paths
